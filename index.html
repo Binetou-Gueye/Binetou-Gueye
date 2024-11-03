@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OUR'DELICE - Page de Présentation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Barre de Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">OUR'DELICE</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="#accueil">Accueil</a></li>
+                <li class="nav-item"><a class="nav-link" href="#menu">Menu</a></li>
+                <li class="nav-item"><a class="nav-link" href="#offres">Offres Spéciales</a></li>
+                <li class="nav-item"><a class="nav-link" href="#reservation">Réservation</a></li>
+                <li class="nav-item"><a class="nav-link" href="#galerie">Galerie</a></li>
+                <li class="nav-item"><a class="nav-link" href="#temoignages">Témoignages</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <!-- Section Accueil -->
+    <header class="header bg-primary text-white text-center" id="accueil">
+        <h1>Bienvenue chez OUR'DELICE</h1>
+        <p class="lead">Savourez nos plats exquis dans un cadre chaleureux</p>
+        <button class="btn btn-light mt-3" onclick="scrollToReservation()">Réservez une table</button>
+    </header>
+    
+
+  <!-- Section Menu -->
+<section id="menu" class="container my-5">
+    <div id="notre-menu">
+        <h2 class="text-center">Notre Menu</h2>
+        <p class="text-center">Découvrez nos plats spéciaux et nos options variées</p>
+    </div>
+    <div class="row">
+        <!-- Entrées -->
+        <div class="col-md-6 menu-category">
+            <h3>Entrées</h3>
+            <div class="menu-item" onclick="showPopup('entree1')">
+                <img src="images/entree1.jpg" alt="entree1" class="menu-img">
+                <div class="item-details">
+                    <p class="item-name">Ratatouille</p>
+                    <p class="item-price">2000 FCFA</p>
+                </div>
+           
+                <img src="images/entree2.jpg" alt="entree2" class="menu-img">
+                <div class="item-details">
+                    <p class="item-name">Salade-saumon</p>
+                    <p class="item-price">2000 FCFA</p>
+                </div>
+
+                <img src="images/entree4.jpg" alt="entree4" class="menu-img">
+                <div class="item-details">
+                    <p class="item-name">Tarte sablée</p>
+                    <p class="item-price">2000 FCFA</p>
+                </div>
+            </div>
+        </div>
+        <!-- Plats Principaux -->
+        <div class="col-md-6 menu-category">
+            <h3>Plats Principaux</h3>
+            <div class="menu-item" onclick="showPopup('poulet yassa')">
+                <img src="images/poulet yassa.jpg" alt="poulet yassa" class="menu-img">
+                <div class="item-details">
+                    <p class="item-name">Yassa Poulet</p>
+                    <p class="item-price">4000 FCFA</p>
+                </div>
+          
+                <img src="images/thiebou dieune rouge.jpg" alt="thiebou dieune rouge" class="menu-img">
+                <div class="item-details">
+                    <p class="item-name">Riz au poisson</br>rouge</p>
+                    <p class="item-price">3500 FCFA</p>
+                </div>
+
+                <img src="images/thiou.jpg" alt="thiou" class="menu-img">
+                <div class="item-details">
+                    <p class="item-name">Thiou</p>
+                    <p class="item-price">1500 FCFA</p>
+                </div>
+
+                <img src="images/soupe harira.jpeg" alt="soupe harira" class="menu-img">
+                <div class="item-details">
+                    <p class="item-name">Soupe harira</p>
+                    <p class="item-price">2000 FCFA</p>
+                </div>
+            </div>
+        </div>
+        <!-- Desserts -->
+        <div class="col-md-6 menu-category">
+            <h3>Desserts</h3>
+            <div class="menu-item" onclick="showPopup('dessert2')">
+                <img src="images/dessert2.jpg" alt="dessert2" class="menu-img">
+                <div class="item-details">
+                    <p class="item-name">Gâteau à l'orange</p>
+                    <p class="item-price">4000 FCFA</p>
+                </div>
+
+                <img src="images/dessert1.jpg" alt="dessert1" class="menu-img">
+                <div class="item-details">
+                    <p class="item-name">Crème vanille</p>
+                    <p class="item-price">1500 FCFA</p>
+                </div>
+
+                <img src="images/Biscuit au fraise.jpg" alt="Biscuit au fraise" class="menu-img">
+                <div class="item-details">
+                    <p class="item-name">Biscuit au fraise</p>
+                    <p class="item-price">1500 FCFA</p>
+                </div>
+
+                <img src="images/Crêpe au chocolat.jpg" alt="Crêpe au chocolat" class="menu-img">
+                <div class="item-details">
+                    <p class="item-name">Crêpe au chocolat</p>
+                    <p class="item-price">1000 FCFA</p>
+                </div>
+            </div>
+        </div>
+        <!-- Boissons -->
+        <div class="col-md-6 menu-category">
+            <h3>Boissons</h3>
+            <!-- Ajoutez les boissons ici -->
+                <div class="menu-item" onclick="showPopup('Jus de bouye')">
+                    <img src="images/Jus de bouye.jpg" alt="Jus de bouye" class="menu-img">
+                    <div class="item-details">
+                        <p class="item-name">Jus de bouye</p>
+                        <p class="item-price">1000 FCFA</p>
+                    </div>
+               
+                    <img src="images/Jus de ditakh.jpg" alt="Jus de ditakh" class="menu-img">
+                    <div class="item-details">
+                        <p class="item-name">Jus de ditakh</p>
+                        <p class="item-price">1000 FCFA</p>
+                    </div>
+    
+                    <img src="images/Jus de gingembre.jpg" alt="Jus de gingembre" class="menu-img">
+                    <div class="item-details">
+                        <p class="item-name">Jus de gingembre</p>
+                        <p class="item-price">1000 FCFA</p>
+                    </div>
+
+                    <img src="images/Jus bissap.jpg" alt="Jus bissap" class="menu-img">
+                    <div class="item-details">
+                        <p class="item-name">Jus bissap</p>
+                        <p class="item-price">1000 FCFA</p>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</section>
+
+
+    <!-- Section Galerie d'Images -->
+<section id="galerie" class="container my-5">
+    <div id="notre-galerie">
+    <h2 class="text-center">Galerie</h2>
+    <p class="text-center">Découvrez notre ambiance chaleureuse et nos plats délicieux</p>
+    </div>
+    <div class="gallery">
+        <div class="gallery-item">
+            <img src="images/galerie1.jpg" alt="Plat 1">
+        </div>
+        <div class="gallery-item">
+            <img src="images/galerie2.jpg" alt="Plat 2">
+        </div>
+        <div class="gallery-item">
+            <img src="images/galerie3.jpg" alt="Intérieur du restaurant">
+        </div>
+        <div class="gallery-item">
+            <img src="images/galerie4.jpg" alt="Ambiance du restaurant">
+        </div>
+        <div class="gallery-item">
+            <img src="images/galerie5.jpg" alt="Membre de l'équipe">
+        </div>
+        <div class="gallery-item">
+            <img src="images/galerie6.jpg" alt="L'équipe en cuisine">
+        </div>
+    </div>
+</section>
+
+    <!-- Section Témoignages -->
+<section id="temoignages" class="container my-5">
+    <h2 class="text-center">Témoignages de Clients</h2>
+    <p class="text-center">Ce que disent nos clients</p>
+    
+    <div class="testimonials-carousel">
+        <div class="testimonial-item">
+            <blockquote>
+                <p>"Excellent service et plats délicieux !"</p>
+                <footer>- M. Abdou Sarr</footer>
+            </blockquote>
+        </div>
+        <div class="testimonial-item">
+            <blockquote>
+                <p>"Ambiance agréable et personnel sympathique"</p>
+                <footer>- Mme Sokhna Fatou Gueye</footer>
+            </blockquote>
+        </div>
+        <div class="testimonial-item">
+            <blockquote>
+                <p>"Une expérience inoubliable. Je recommande vivement !"</p>
+                <footer>- Paul Lefèvre</footer>
+            </blockquote>
+        </div>
+    </div>
+
+    <div class="carousel-controls">
+        <span class="prev" onclick="changeSlide(-1)">&#10094;</span>
+        <span class="next" onclick="changeSlide(1)">&#10095;</span>
+    </div>
+</section>
+
+
+   <!-- Section Contact -->
+<section id="contact" class="container my-5">
+    <h2 class="text-center">Contactez-nous</h2>
+    <p class="text-center">Contactez-nous pour plus d'informations</p>
+    
+    <div class="contact-info">
+        <p><strong>Adresse :</strong> 123 Rue du Délice, Dakar,Senegal</p>
+        <p><strong>Téléphone :</strong> <a href="tel:781756836">78 175 68 36</a></p>
+        <p><strong>Email :</strong> <a href="mailto:ourdelice@gmail.com">ourdelice@gmail.com</a></p>
+    </div>
+
+    <form class="contact-form">
+        <div class="form-group">
+            <label for="name">Prénom & Nom</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+            <label for="phone">Téléphone</label>
+            <input type="tel" id="phone" name="phone" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+            <label for="subject">Objet</label>
+            <input type="text" id="subject" name="subject" required>
+        </div>
+        <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+        </div>
+        <button type="submit" class="contact-btn">Envoyer</button>
+        <div id="confirmation-message" style="display: none;"></div> <!-- Initialement masqué -->
+
+    </form>
+</section>
+
+    <!-- Lier le fichier JavaScript ici, juste avant </body> -->
+<script src="carousel.js"></script>
+<script src="contact.js"></script>
+</body>
+
+</html>
